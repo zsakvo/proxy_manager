@@ -38,4 +38,19 @@ abstract class ProxyManagerPlatform extends PlatformInterface {
   Future<void> cleanSystemProxy() async {
     throw UnimplementedError('cleanSystemProxy() has not been implemented.');
   }
+
+  /// get current system proxy base
+  Future<Map<String, dynamic>> getSystemProxy() async {
+    throw UnimplementedError('getSystemProxy() has not been implemented.');
+  }
+
+  /// get current system dns base
+  Future<Map<String, dynamic>?> getSystemDns() async {
+    throw UnimplementedError('getSystemDns() has not been implemented.');
+  }
+
+  /// set system dns base
+  Future<void> setSystemDns(List<String> dns) async {
+    throw UnimplementedError('setSystemDns() has not been implemented.');
+  }
 }

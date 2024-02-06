@@ -25,6 +25,8 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     initPlatformState();
+    _proxyManagerPlugin.getSystemProxy().then((value) => print("current proxies:$value"));
+    _proxyManagerPlugin.getSystemDns().then((value) => print("current dns:$value"));
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
@@ -33,8 +35,7 @@ class _MyAppState extends State<MyApp> {
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
-      platformVersion = await _proxyManagerPlugin.getPlatformVersion() ??
-          'Unknown platform version';
+      platformVersion = await _proxyManagerPlugin.getPlatformVersion() ?? 'Unknown platform version';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }

@@ -1,16 +1,22 @@
 PODS:
   - FlutterMacOS (1.0.0)
+  - proxy_manager (0.0.1):
+    - FlutterMacOS
 
 DEPENDENCIES:
   - FlutterMacOS (from `Flutter/ephemeral`)
+  - proxy_manager (from `Flutter/ephemeral/.symlinks/plugins/proxy_manager/macos`)
 
 EXTERNAL SOURCES:
   FlutterMacOS:
     :path: Flutter/ephemeral
+  proxy_manager:
+    :path: Flutter/ephemeral/.symlinks/plugins/proxy_manager/macos
 
 SPEC CHECKSUMS:
-  FlutterMacOS: ae6af50a8ea7d6103d888583d46bd8328a7e9811
+  FlutterMacOS: 8f6f14fa908a6fb3fba0cd85dbd81ec4b251fb24
+  proxy_manager: 542f2521a9ade938bfdd8a2ff566d95515fa7f2c
 
-PODFILE CHECKSUM: 6eac6b3292e5142cfc23bdeb71848a40ec51c14c
+PODFILE CHECKSUM: 353c8bcc5d5b0994e508d035b5431cfe18c1dea7
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.14.3
